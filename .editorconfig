@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# MVVMTK0034: Direct field reference to [ObservableProperty] backing field
+dotnet_diagnostic.MVVMTK0034.severity = silent
