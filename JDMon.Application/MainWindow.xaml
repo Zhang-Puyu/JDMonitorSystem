@@ -1,4 +1,4 @@
-﻿<Window x:Class="JDMon.Application.MainWindow"
+﻿<Window x:Name="MainWindow1" x:Class="JDMon.Application.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -41,7 +41,7 @@
                 <RibbonQuickAccessToolBar>
                     <RibbonButton SmallImageSource=".\Icons\打开.png" Command="{Binding OpenConfigFileCommand}"/>
                     <RibbonButton SmallImageSource=".\Icons\保存.png" Command="{Binding SaveConfigFileCommand}"/>
-                    <RibbonButton SmallImageSource=".\Icons\另存为.png" Command="{Binding SaveAsConfigFileCommand}"/>
+                    <RibbonButton SmallImageSource=".\Icons\另存为.png" Command="{Binding SaveNewConfigFileCommand}"/>
                 </RibbonQuickAccessToolBar>
             </Ribbon.QuickAccessToolBar>
             <Ribbon.HelpPaneContent>

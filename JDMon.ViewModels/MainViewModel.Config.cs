@@ -39,7 +39,7 @@ namespace JDMon.ViewModels
         }
 
         [RelayCommand]
-        private void SaveAsConfigFile()
+        private void SaveNewConfigFile()
         {
             var dialog = new SaveFileDialog()
             {
@@ -60,7 +60,7 @@ namespace JDMon.ViewModels
         }
 
 
-        private void ReadConfig()
+        public void ReadConfig()
         {
             ShowMessageEvent($"Info: 读取配置文件{CurrConfigFile}");
             try
@@ -89,7 +89,7 @@ namespace JDMon.ViewModels
             }
         }
 
-        private void WriteConfig()
+        public void WriteConfig()
         {
             ShowMessageEvent($"Info: 写入配置文件{CurrConfigFile}");
             try

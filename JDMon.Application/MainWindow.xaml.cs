@@ -15,6 +15,9 @@ namespace JDMon.Application
         {
             InitializeComponent();
             DataContext = new ViewModels.MainViewModel(jdHostControl.JDMonHost);
+
+            this.Loaded += (e, a) => (DataContext as ViewModels.MainViewModel).ReadConfig();
+            this.Unloaded += (e, a) => (DataContext as ViewModels.MainViewModel).WriteConfig();
         }
     }
 }

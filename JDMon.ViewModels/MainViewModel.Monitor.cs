@@ -1,17 +1,12 @@
 ﻿using System.Runtime.InteropServices;
 using CommunityToolkit.Mvvm.ComponentModel;
-using AxNCMONIOEXLib;
 using CommunityToolkit.Mvvm.Input;
 using System.IO;
-using System.Windows.Forms;
-using System.Collections.ObjectModel;
 using System;
-using System.Threading;
+using AxNCMONIOEXLib;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using JDMon.RemoteDesktop;
-using Newtonsoft.Json;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace JDMon.ViewModels
@@ -33,12 +28,6 @@ namespace JDMon.ViewModels
 
             AllocConsole();
             ShowMessageEvent += Shell.WriteLine;
-
-            ReadConfig();
-        }
-        ~MainViewModel()
-        {
-            WriteConfig();
         }
 
         #region 监测对象属性
